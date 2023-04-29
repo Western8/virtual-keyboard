@@ -6,7 +6,7 @@
 }
 
 .wrapper {
-    max-width: 500px;
+    max-width: 700px;
     height: 100vh;;
     margin: auto;
 }
@@ -18,8 +18,24 @@
 }
 
 .keyboard {
+    display: grid;
+    grid-template-columns: repeat(31, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-content: space-between;
+    /*
+    grid-area: r11;
+    grid-template-areas: 
+        "r11 r12 r13 r14 r15 r16 r17 r18 r19 r10 r11 r12 r13 r14 r14"
+        "r1 r1 r1 r14 r15 r16 r17 r18 r19 r10 r11 r12 r13 r14 r15"
+        "r11 r12 r13 r14 r15 r16 r17 r18 r19 r10 r11 r12 r13 r14 r15"
+        "r11 r12 r13 r14 r15 r16 r17 r18 r19 r10 r11 r12 r13 r14 r15"
+        "r11 r12 r13 r14 r15 r16 r17 r18 r19 r10 r11 r12 r13 r14 r15";
+        */
+    gap: 5px;
+    /*
     display: flex;
     flex-direction: column;
+    */
 }
 
 .row {
@@ -30,7 +46,8 @@
 .key {
     width: 40px;
     height: 40px;
-    gap: 10px;
+    /* gap: 10px; */
+    grid-column: span 2;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -50,4 +67,19 @@
     height: 50px;*/
     font-size: 30px;
     background-color: var(--color-key-active);
+}
+
+.size-middle {
+    width: auto;
+    grid-column: span 3;
+}
+
+.size-big {
+    width: auto;
+    grid-column: span 4;
+}
+
+#Space {
+    width: auto;
+    grid-column: span 13;
 }
