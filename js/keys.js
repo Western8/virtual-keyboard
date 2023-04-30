@@ -79,34 +79,34 @@ export default [
   },
 
   {
-    code: 'Digital1', keyEnUp: '!', keyEnLow: '1', keyRuUp: '!', keyRuLow: '1',
+    code: 'Digit1', keyEnUp: '!', keyEnLow: '1', keyRuUp: '!', keyRuLow: '1',
   },
   {
-    code: 'Digital2', keyEnUp: '@', keyEnLow: '2', keyRuUp: '"', keyRuLow: '2',
+    code: 'Digit2', keyEnUp: '@', keyEnLow: '2', keyRuUp: '"', keyRuLow: '2',
   },
   {
-    code: 'Digital3', keyEnUp: '#', keyEnLow: '3', keyRuUp: '№', keyRuLow: '3',
+    code: 'Digit3', keyEnUp: '#', keyEnLow: '3', keyRuUp: '№', keyRuLow: '3',
   },
   {
-    code: 'Digital4', keyEnUp: '$', keyEnLow: '4', keyRuUp: ';', keyRuLow: '4',
+    code: 'Digit4', keyEnUp: '$', keyEnLow: '4', keyRuUp: ';', keyRuLow: '4',
   },
   {
-    code: 'Digital5', keyEnUp: '%', keyEnLow: '5', keyRuUp: '%', keyRuLow: '5',
+    code: 'Digit5', keyEnUp: '%', keyEnLow: '5', keyRuUp: '%', keyRuLow: '5',
   },
   {
-    code: 'Digital6', keyEnUp: '^', keyEnLow: '6', keyRuUp: ':', keyRuLow: '6',
+    code: 'Digit6', keyEnUp: '^', keyEnLow: '6', keyRuUp: ':', keyRuLow: '6',
   },
   {
-    code: 'Digital7', keyEnUp: '&', keyEnLow: '7', keyRuUp: '?', keyRuLow: '7',
+    code: 'Digit7', keyEnUp: '&', keyEnLow: '7', keyRuUp: '?', keyRuLow: '7',
   },
   {
-    code: 'Digital8', keyEnUp: '*', keyEnLow: '8', keyRuUp: '*', keyRuLow: '8',
+    code: 'Digit8', keyEnUp: '*', keyEnLow: '8', keyRuUp: '*', keyRuLow: '8',
   },
   {
-    code: 'Digital9', keyEnUp: '(', keyEnLow: '9', keyRuUp: '(', keyRuLow: '9',
+    code: 'Digit9', keyEnUp: '(', keyEnLow: '9', keyRuUp: '(', keyRuLow: '9',
   },
   {
-    code: 'Digital0', keyEnUp: ')', keyEnLow: '0', keyRuUp: ')', keyRuLow: '0',
+    code: 'Digit0', keyEnUp: ')', keyEnLow: '0', keyRuUp: ')', keyRuLow: '0',
   },
 
   {
@@ -162,13 +162,13 @@ export default [
     code: 'Tab', keyEnUp: 'Tab', keyEnLow: 'Tab', keyRuUp: 'Tab', keyRuLow: 'Tab',
   },
   {
-    code: 'Delete', keyEnUp: 'Del', keyEnLow: '', keyRuUp: '', keyRuLow: '',
+    code: 'Delete', keyEnUp: 'Del', keyEnLow: 'Del', keyRuUp: 'Del', keyRuLow: 'Del',
   },
   {
-    code: 'CapsLock', keyEnUp: 'CapsLock', keyEnLow: 'CapsLock', keyRuUp: 'CapsLock', keyRuLow: 'CapsLock',
+    code: 'CapsLock', keyEnUp: 'Caps Lock', keyEnLow: 'Caps Lock', keyRuUp: 'Caps Lock', keyRuLow: 'Caps Lock',
   },
   {
-    code: 'Enter', keyEnUp: 'Enter', keyEnLow: '', keyRuUp: '', keyRuLow: '',
+    code: 'Enter', keyEnUp: 'Enter', keyEnLow: 'Enter', keyRuUp: 'Enter', keyRuLow: 'Enter',
   },
   {
     code: 'ShiftLeft', keyEnUp: 'Shift', keyEnLow: 'Shift', keyRuUp: 'Shift', keyRuLow: 'Shift',
@@ -189,12 +189,12 @@ export default [
     code: 'AltRight', keyEnUp: 'Alt', keyEnLow: 'Alt', keyRuUp: 'Alt', keyRuLow: 'Alt',
   },
   {
-    code: 'MetaLeft', keyEnUp: 'Win', keyEnLow: '', keyRuUp: '', keyRuLow: '',
+    code: 'MetaLeft', keyEnUp: 'Win', keyEnLow: 'Win', keyRuUp: 'Win', keyRuLow: 'Win',
   },
   {
-    code: 'MetaRight', keyEnUp: 'Win', keyEnLow: '', keyRuUp: '', keyRuLow: '',
+    code: 'MetaRight', keyEnUp: 'Win', keyEnLow: 'Win', keyRuUp: 'Win', keyRuLow: 'Win',
   },
   {
-    code: 'Space', keyEnUp: ' ', keyEnLow: '', keyRuUp: '', keyRuLow: '',
+    code: 'Space', keyEnUp: ' ', keyEnLow: ' ', keyRuUp: ' ', keyRuLow: ' ',
   },
 ];
