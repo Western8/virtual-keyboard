@@ -31,15 +31,11 @@ wrapper.append(h1);
 
 const input = document.createElement('textarea');
 input.classList.add('input');
+input.setAttribute('readonly', 'readonly');
 wrapper.append(input);
-
-function selectStart() {
-  return false;
-}
 
 const keyboard = document.createElement('div');
 keyboard.classList.add('keyboard');
-keyboard.addEventListener('selectstart', selectStart);
 wrapper.append(keyboard);
 
 function addText(text) {
@@ -89,7 +85,15 @@ function actKey(code, shiftKey = false, ctrlKey = false, altKey = false) {
     state.capsLock = !state.capsLock;
   }
 
-  if (((code === 'ControlLeft' || code === 'ControlRight') && altKey) || ((code === 'AltLeft' || code === 'AltRight') && ctrlKey)) {
+  let ctrlActive = ctrlKey;
+  let altActive = altKey;
+  if (code === 'ControlLeft' || code === 'AltLeft') {
+    const ctrlActiveKey = document.getElementById('ControlLeft').classList.contains('active');
+    ctrlActive = ctrlActive || ctrlActiveKey;
+    const altActiveKey = document.getElementById('AltLeft').classList.contains('active');
+    altActive = altActive || altActiveKey;
+  }
+  if (((code === 'ControlLeft' || code === 'ControlRight') && altActive) || ((code === 'AltLeft' || code === 'AltRight') && ctrlActive)) {
     state.langRu = !state.langRu;
   }
 
@@ -117,6 +121,9 @@ function actKey(code, shiftKey = false, ctrlKey = false, altKey = false) {
 
 function mousedownKey(e) {
   const { code } = e.target.dataset;
+  if (e.target) {
+    e.target.classList.add('active');
+  }
   if (code === 'ShiftLeft' || code === 'ShiftRight') {
     state.shift = true;
     changeView();
@@ -125,6 +132,9 @@ function mousedownKey(e) {
 
 function mouseupKey(e) {
   const { code } = e.target.dataset;
+  if (e.target) {
+    e.target.classList.remove('active');
+  }
   actKey(code, e.target.shiftKey, e.target.ctrlKey, e.target.altKey);
 }
 
@@ -138,10 +148,12 @@ function pressKeydown(e) {
       changeView();
     }
   }
+  if (e.code === 'Tab') {
+    e.preventDefault();
+  }
 }
 
 function pressKeyup(e) {
-  // e.preventDefault();
   const key = document.getElementById(e.code);
   if (key) {
     key.classList.remove('active');
